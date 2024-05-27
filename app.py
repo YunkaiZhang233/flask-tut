@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # instantiate class "Flask":
 # create program object "app"
@@ -16,12 +16,16 @@ app = Flask(__name__)
 # e.g. if @app.route("/hello"), complete URL = localhost:5000/hello
 # @app.route("/"), complete URL = localhost:5000
 @app.route("/")
+# 1
 # When users visit this URL
 # this function gets triggered
 # fetches return value
 # and displays the return value to the browser window
+
+# 2
+# flask will by default look for template files in `templates` folder
 def index():
-    return "<h1>TOTALLY USELESS APP<h1>"
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
