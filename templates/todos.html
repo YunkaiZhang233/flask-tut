@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="w3-content">
+        <div class="w3-margin">
+            <div class="w3-container">
+                <ul class="w3-ul w3-card">
+                    {% for todo in todos %}
+                        <li class="w3-large">
+                            {{ todo["title"] }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
